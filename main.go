@@ -38,17 +38,17 @@ var NsServerConnStr string
 var SslConnStr string
 
 func argParse() {
-	flag.StringVar(&options.rootCertFile, "rootCA", "/Users/neil.huang/source/couchbase/ns_server/data/n_1/var/lib/servercertfiles2/root/ca.pem",
+	flag.StringVar(&options.rootCertFile, "rootCA", "",
 		"root CA certificate file path")
-	flag.StringVar(&options.clientCertFile, "clientCert", "/Users/neil.huang/source/couchbase/ns_server/data/n_1/var/lib/servercertfiles2/clients/clientuser.pem",
+	flag.StringVar(&options.clientCertFile, "clientCert", "",
 		"client certificate file path")
-	flag.StringVar(&options.clientKeyFile, "clientKey", "/Users/neil.huang/source/couchbase/ns_server/data/n_1/var/lib/servercertfiles2/clients/private/clientuser.key",
+	flag.StringVar(&options.clientKeyFile, "clientKey", "",
 		"client private key file path")
 
 
-	flag.StringVar(&options.nsServerUrl, "nsServer", "127.0.0.1:19001",
+	flag.StringVar(&options.nsServerUrl, "nsServer", "",
 		"URL to ns server secure port (i.e. \"127.0.0.1:19001\")")
-	flag.StringVar(&options.kvUrl, "kv", "127.0.0.1:11994",
+	flag.StringVar(&options.kvUrl, "kv", "",
 		"URL to ns server secure port (i.e. \"127.0.0.1:11994\")")
 	flag.Parse()
 
